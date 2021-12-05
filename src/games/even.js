@@ -2,7 +2,9 @@ import readlineSync from 'readline-sync';
 import greeting from '../cli.js';
 
 const evenGame = () => {
+  console.log('Welcome to the Brain Games!');
   const name = greeting();
+  console.log(`Hello, ${name}!`);
   const numOfQuestions = 3;
 
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
@@ -19,7 +21,6 @@ const evenGame = () => {
       return;
     }
   }
-
   console.log(`Congratulations, ${name}!`);
 };
 

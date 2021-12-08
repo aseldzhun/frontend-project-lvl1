@@ -3,6 +3,9 @@ import {
 } from '../index.js';
 
 const isPrime = (number) => {
+  if (number === 0) {
+    return 'no';
+  }
   if (number < 4) {
     return 'yes';
   }

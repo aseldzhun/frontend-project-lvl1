@@ -7,6 +7,12 @@
 
 ![eslint.yml](https://github.com/aseldzhun/frontend-project-lvl1/actions/workflows/eslint.yml/badge.svg)
 
+## Setup
+
+```sh
+make install
+```
+
 <a href="https://asciinema.org/a/mwxaV2hSEa9VImc5RhEU7PKz2" target="_blank"><img src="https://asciinema.org/a/mwxaV2hSEa9VImc5RhEU7PKz2.svg" /></a>
 
 <a href="https://asciinema.org/a/454412" target="_blank"><img src="https://asciinema.org/a/454412.svg" /></a>

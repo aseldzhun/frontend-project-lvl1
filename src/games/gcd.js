@@ -15,8 +15,8 @@ const gcdGame = () => {
   const taskOfGame = 'Find the greatest common divisor of given numbers.';
   const name = welcomeToGame(taskOfGame);
   for (let counter = 1; counter <= numOfQuestions; counter += 1) {
-    const numberOne = Math.floor(Math.random() * 100);
-    const numberTwo = Math.floor(Math.random() * 100);
+    const numberOne = Math.floor(Math.random() * 100) + 1;
+    const numberTwo = Math.floor(Math.random() * 100) + 1;
     const question = `${numberOne} ${numberTwo}`;
     const smallerNumber = (numberOne < numberTwo) ? numberOne : numberTwo;
     const biggerNumber = (numberOne > numberTwo) ? numberOne : numberTwo;

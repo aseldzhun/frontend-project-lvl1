@@ -1,3 +1,5 @@
+# Brain games
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/aseldzhun/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/aseldzhun/frontend-project-lvl1/actions)
 
@@ -14,3 +16,5 @@
 <a href="https://asciinema.org/a/454697" target="_blank"><img src="https://asciinema.org/a/454697.svg" /></a>
 
 <a href="https://asciinema.org/a/454703" target="_blank"><img src="https://asciinema.org/a/454703.svg" /></a>
+
+This repository is created by aseldzhun as a tutorial project.

@@ -18,7 +18,7 @@ const primeGame = () => {
   const taskOfGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const name = welcomeToGame(taskOfGame);
   for (let counter = 1; counter <= numOfQuestions; counter += 1) {
-    const number = Math.floor(Math.random() * 100);
+    const number = Math.floor(Math.random() * 100) + 1;
     const question = `${number}`;
     const rightAnswer = isPrime(number).toString();
     const answerIsRight = round(name, question, rightAnswer);

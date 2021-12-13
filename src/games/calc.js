@@ -1,10 +1,10 @@
 import {
-  welcomeToGame, numOfQuestions, round, congrats,
+  numOfQuestions, engine,
 } from '../index.js';
 
 const evenGame = () => {
   const taskOfGame = 'What is the result of the expression?';
-  const name = welcomeToGame(taskOfGame);
+  const pairsOfQuestionsAndAnswers = [];
   const operators = ['+', '-', '*'];
   for (let counter = 1; counter <= numOfQuestions; counter += 1) {
     const numberOne = Math.floor(Math.random() * 100);
@@ -23,15 +23,10 @@ const evenGame = () => {
         resultOfExpression = numberOne * numberTwo;
         break;
     }
-    const rightAnswer = resultOfExpression.toString();
-    const answerIsRight = round(name, question, rightAnswer);
-    if (answerIsRight === 'wrong') {
-      return;
-    }
-    if (counter === 3) {
-      congrats(name);
-    }
+    const answer = resultOfExpression.toString();
+    pairsOfQuestionsAndAnswers.push([question, answer]);
   }
+  engine(taskOfGame, pairsOfQuestionsAndAnswers);
 };
 
 export default evenGame;

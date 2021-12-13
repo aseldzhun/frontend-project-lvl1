@@ -1,5 +1,5 @@
 import {
-  welcomeToGame, numOfQuestions, round, congrats,
+  engine, numOfQuestions,
 } from '../index.js';
 
 const getGreatestOurDivider = (smallerNumber, biggerNumber) => {
@@ -13,7 +13,7 @@ const getGreatestOurDivider = (smallerNumber, biggerNumber) => {
 
 const gcdGame = () => {
   const taskOfGame = 'Find the greatest common divisor of given numbers.';
-  const name = welcomeToGame(taskOfGame);
+  const pairsOfQuestionsAndAnswers = [];
   for (let counter = 1; counter <= numOfQuestions; counter += 1) {
     const numberOne = Math.floor(Math.random() * 100) + 1;
     const numberTwo = Math.floor(Math.random() * 100) + 1;
@@ -21,15 +21,10 @@ const gcdGame = () => {
     const smallerNumber = (numberOne < numberTwo) ? numberOne : numberTwo;
     const biggerNumber = (numberOne > numberTwo) ? numberOne : numberTwo;
     const greatestOurDivider = getGreatestOurDivider(smallerNumber, biggerNumber);
-    const rightAnswer = greatestOurDivider.toString();
-    const answerIsRight = round(name, question, rightAnswer);
-    if (answerIsRight === 'wrong') {
-      return;
-    }
-    if (counter === 3) {
-      congrats(name);
-    }
+    const answer = greatestOurDivider.toString();
+    pairsOfQuestionsAndAnswers.push([question, answer]);
   }
+  engine(taskOfGame, pairsOfQuestionsAndAnswers);
 };
 
 export default gcdGame;

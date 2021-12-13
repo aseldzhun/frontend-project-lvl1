@@ -1,5 +1,5 @@
 import {
-  welcomeToGame, numOfQuestions, round, congrats,
+  engine, numOfQuestions,
 } from '../index.js';
 
 const isPrime = (number) => {
@@ -19,19 +19,14 @@ const isPrime = (number) => {
 
 const primeGame = () => {
   const taskOfGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const name = welcomeToGame(taskOfGame);
+  const pairsOfQuestionsAndAnswers = [];
   for (let counter = 1; counter <= numOfQuestions; counter += 1) {
     const number = Math.floor(Math.random() * 100) + 1;
     const question = `${number}`;
-    const rightAnswer = isPrime(number).toString();
-    const answerIsRight = round(name, question, rightAnswer);
-    if (answerIsRight === 'wrong') {
-      return;
-    }
-    if (counter === 3) {
-      congrats(name);
-    }
+    const answer = isPrime(number).toString();
+    pairsOfQuestionsAndAnswers.push([question, answer]);
   }
+  engine(taskOfGame, pairsOfQuestionsAndAnswers);
 };
 
 export default primeGame;

@@ -17,31 +17,31 @@ make install
 ## Asciinema
 
 ```sh
-Game brain-even
+brain-even
 ```
 
 <a href="https://asciinema.org/a/mwxaV2hSEa9VImc5RhEU7PKz2" target="_blank"><img src="https://asciinema.org/a/mwxaV2hSEa9VImc5RhEU7PKz2.svg" /></a>
 
 ```sh
-Game brain-calc
+brain-calc
 ```
 
 <a href="https://asciinema.org/a/454412" target="_blank"><img src="https://asciinema.org/a/454412.svg" /></a>
 
 ```sh
-Game brain-grc
+brain-grc
 ```
 
 <a href="https://asciinema.org/a/RUGuNGMEprjbKlMgrxqiDgtVB" target="_blank"><img src="https://asciinema.org/a/RUGuNGMEprjbKlMgrxqiDgtVB.svg" /></a>
 
 ```sh
-Game brain-progression
+brain-progression
 ```
 
 <a href="https://asciinema.org/a/454697" target="_blank"><img src="https://asciinema.org/a/454697.svg" /></a>
 
 ```sh
-Game brain-prime
+brain-prime
 ```
 
 <a href="https://asciinema.org/a/454703" target="_blank"><img src="https://asciinema.org/a/454703.svg" /></a>

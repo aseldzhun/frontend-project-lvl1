@@ -14,7 +14,7 @@
 make install
 ```
 
-## Asciinema
+## Examples
 
 ```sh
 brain-even

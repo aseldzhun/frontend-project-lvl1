@@ -14,7 +14,7 @@ export const engine = (taskOfGame, pairsOfQuestionsAndAnswers) => {
     console.log(`Question: ${question}`);
     const receivedAnswer = readlineSync.question('Your answer: ');
     if (receivedAnswer !== answer) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${name}!`);
+      console.log(`'${receivedAnswer}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${name}!`);
       return;
     }
     console.log('Correct!');

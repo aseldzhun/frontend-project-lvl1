@@ -1,11 +1,10 @@
 import readlineSync from 'readline-sync';
-import greeting from './cli.js';
 
 export const numOfQuestions = 3;
 
 export const engine = (taskOfGame, pairsOfQuestionsAndAnswers) => {
   console.log('Welcome to the Brain Games!');
-  const name = greeting();
+  const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log(taskOfGame);
 

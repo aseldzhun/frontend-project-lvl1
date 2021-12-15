@@ -4,6 +4,22 @@ import {
 
 const taskOfGame = 'What is the result of the expression?';
 
+const getResultOfExpression = (numberOne, numberTwo, operator) => {
+  let resultOfExpression;
+  switch (operator) {
+    case '+':
+      resultOfExpression = numberOne + numberTwo;
+      break;
+    case '-':
+      resultOfExpression = numberOne - numberTwo;
+      break;
+    default:
+      resultOfExpression = numberOne * numberTwo;
+      break;
+  }
+  return resultOfExpression.toString();
+};
+
 const evenGame = () => {
   const pairsOfQuestionsAndAnswers = [];
   const operators = ['+', '-', '*'];
@@ -12,19 +28,7 @@ const evenGame = () => {
     const numberTwo = Math.floor(Math.random() * 100);
     const operator = operators[Math.floor(Math.random() * 3)];
     const question = `${numberOne} ${operator} ${numberTwo}`;
-    let resultOfExpression;
-    switch (operator) {
-      case '+':
-        resultOfExpression = numberOne + numberTwo;
-        break;
-      case '-':
-        resultOfExpression = numberOne - numberTwo;
-        break;
-      default:
-        resultOfExpression = numberOne * numberTwo;
-        break;
-    }
-    const answer = resultOfExpression.toString();
+    const answer = getResultOfExpression(numberOne, numberTwo, operator);
     pairsOfQuestionsAndAnswers.push([question, answer]);
   }
   engine(taskOfGame, pairsOfQuestionsAndAnswers);

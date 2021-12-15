@@ -2,6 +2,8 @@ import {
   engine, numOfQuestions,
 } from '../index.js';
 
+const taskOfGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 const isPrime = (number) => {
   if (number === 0) {
     return 'no';
@@ -18,7 +20,6 @@ const isPrime = (number) => {
 };
 
 const primeGame = () => {
-  const taskOfGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const pairsOfQuestionsAndAnswers = [];
   for (let counter = 1; counter <= numOfQuestions; counter += 1) {
     const number = Math.floor(Math.random() * 100) + 1;

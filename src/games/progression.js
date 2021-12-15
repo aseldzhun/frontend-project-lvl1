@@ -2,8 +2,9 @@ import {
   engine, numOfQuestions,
 } from '../index.js';
 
+const taskOfGame = 'What is the result of the expression?';
+
 const progressionGame = () => {
-  const taskOfGame = 'What is the result of the expression?';
   const pairsOfQuestionsAndAnswers = [];
   for (let counter = 1; counter <= numOfQuestions; counter += 1) {
     const firstNumber = Math.floor(Math.random() * 100);

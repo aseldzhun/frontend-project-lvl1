@@ -2,6 +2,8 @@ import {
   engine, numOfQuestions,
 } from '../index.js';
 
+const taskOfGame = 'Find the greatest common divisor of given numbers.';
+
 const getGreatestOurDivider = (smallerNumber, biggerNumber) => {
   for (let divider = smallerNumber; divider >= 1; divider -= 1) {
     if (biggerNumber % divider === 0 && smallerNumber % divider === 0) {
@@ -12,7 +14,6 @@ const getGreatestOurDivider = (smallerNumber, biggerNumber) => {
 };
 
 const gcdGame = () => {
-  const taskOfGame = 'Find the greatest common divisor of given numbers.';
   const pairsOfQuestionsAndAnswers = [];
   for (let counter = 1; counter <= numOfQuestions; counter += 1) {
     const numberOne = Math.floor(Math.random() * 100) + 1;

@@ -2,8 +2,9 @@ import {
   numOfQuestions, engine,
 } from '../index.js';
 
+const taskOfGame = 'What is the result of the expression?';
+
 const evenGame = () => {
-  const taskOfGame = 'What is the result of the expression?';
   const pairsOfQuestionsAndAnswers = [];
   const operators = ['+', '-', '*'];
   for (let counter = 1; counter <= numOfQuestions; counter += 1) {

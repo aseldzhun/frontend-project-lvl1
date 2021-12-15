@@ -8,8 +8,9 @@ export const engine = (taskOfGame, pairsOfQuestionsAndAnswers) => {
   console.log(`Hello, ${name}!`);
   console.log(taskOfGame);
 
-  for (let round = 0; round < pairsOfQuestionsAndAnswers.length; round += 1) {
-    const [question, answer] = pairsOfQuestionsAndAnswers[round];
+  /* eslint-disable-next-line */
+  for (const pairOfQuestionAndAnswer of pairsOfQuestionsAndAnswers) {
+    const [question, answer] = pairOfQuestionAndAnswer;
     console.log(`Question: ${question}`);
     const receivedAnswer = readlineSync.question('Your answer: ');
     if (receivedAnswer !== answer) {

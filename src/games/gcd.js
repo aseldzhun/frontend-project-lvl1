@@ -5,13 +5,14 @@ import getRandomNumber from '../randomNumber.js';
 
 const taskOfGame = 'Find the greatest common divisor of given numbers.';
 
-const getGreatestOurDivider = (smallerNumber, biggerNumber) => {
-  for (let divider = smallerNumber; divider >= 1; divider -= 1) {
-    if (biggerNumber % divider === 0 && smallerNumber % divider === 0) {
-      return divider;
-    }
+const getGreatestOurDivider = (numberOne, numberTwo) => {
+  const smallerNumber = (numberOne < numberTwo) ? numberOne : numberTwo;
+  let biggerNumber = (numberOne > numberTwo) ? numberOne : numberTwo;
+  if (smallerNumber === biggerNumber) {
+    return smallerNumber;
   }
-  return 1;
+  biggerNumber -= smallerNumber;
+  return (getGreatestOurDivider(smallerNumber, biggerNumber));
 };
 
 const gcdGame = () => {
@@ -20,9 +21,7 @@ const gcdGame = () => {
     const numberOne = getRandomNumber(100);
     const numberTwo = getRandomNumber(100);
     const question = `${numberOne} ${numberTwo}`;
-    const smallerNumber = (numberOne < numberTwo) ? numberOne : numberTwo;
-    const biggerNumber = (numberOne > numberTwo) ? numberOne : numberTwo;
-    const greatestOurDivider = getGreatestOurDivider(smallerNumber, biggerNumber);
+    const greatestOurDivider = getGreatestOurDivider(numberOne, numberTwo);
     const answer = greatestOurDivider.toString();
     roundsData.push([question, answer]);
   }

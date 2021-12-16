@@ -8,7 +8,6 @@ export const engine = (taskOfGame, pairsOfQuestionsAndAnswers) => {
   console.log(`Hello, ${name}!`);
   console.log(taskOfGame);
 
-  /* eslint-disable-next-line */
   for (const pairOfQuestionAndAnswer of pairsOfQuestionsAndAnswers) {
     const [question, answer] = pairOfQuestionAndAnswer;
     console.log(`Question: ${question}`);

@@ -3,32 +3,29 @@ import {
 } from '../index.js';
 
 const taskOfGame = 'What is the result of the expression?';
+const operators = ['+', '-', '*'];
 
-const getResultOfExpression = (numberOne, numberTwo, operator) => {
-  let resultOfExpression;
+const getAnswer = (numberOne, numberTwo, operator) => {
   switch (operator) {
     case '+':
-      resultOfExpression = numberOne + numberTwo;
-      break;
+      return numberOne + numberTwo;
     case '-':
-      resultOfExpression = numberOne - numberTwo;
-      break;
+      return numberOne - numberTwo;
+    case '*':
+      return numberOne * numberTwo;
     default:
-      resultOfExpression = numberOne * numberTwo;
-      break;
+      return null;
   }
-  return resultOfExpression.toString();
 };
 
 const evenGame = () => {
   const roundsData = [];
-  const operators = ['+', '-', '*'];
   for (let counter = 1; counter <= numOfQuestions; counter += 1) {
     const numberOne = Math.floor(Math.random() * 100);
     const numberTwo = Math.floor(Math.random() * 100);
     const operator = operators[Math.floor(Math.random() * 3)];
     const question = `${numberOne} ${operator} ${numberTwo}`;
-    const answer = getResultOfExpression(numberOne, numberTwo, operator);
+    const answer = getAnswer(numberOne, numberTwo, operator).toString();
     roundsData.push([question, answer]);
   }
   engine(taskOfGame, roundsData);

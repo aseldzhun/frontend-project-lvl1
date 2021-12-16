@@ -1,6 +1,7 @@
 import {
   engine, numOfQuestions,
 } from '../index.js';
+import getRandomNumber from '../randomNumber.js';
 
 const taskOfGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -22,7 +23,7 @@ const isPrime = (number) => {
 const primeGame = () => {
   const roundsData = [];
   for (let counter = 1; counter <= numOfQuestions; counter += 1) {
-    const number = Math.floor(Math.random() * 100) + 1;
+    const number = getRandomNumber(100);
     const question = `${number}`;
     const answer = (isPrime(number)) ? 'yes' : 'no';
     roundsData.push([question, answer]);

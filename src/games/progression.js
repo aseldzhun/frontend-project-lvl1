@@ -1,6 +1,7 @@
 import {
   engine, numOfQuestions,
 } from '../index.js';
+import getRandomNumber from '../randomNumber.js';
 
 const taskOfGame = 'What is the result of the expression?';
 
@@ -15,8 +16,8 @@ const getHiddenNumber = (progression) => {
 const progressionGame = () => {
   const roundsData = [];
   for (let counter = 1; counter <= numOfQuestions; counter += 1) {
-    const firstNumber = Math.floor(Math.random() * 100);
-    const commonDifference = Math.floor(Math.random() * 10) + 1;
+    const firstNumber = getRandomNumber(100);
+    const commonDifference = getRandomNumber(10);
     const progressionLength = 10;
     const progression = [firstNumber];
     for (let index = 1; index < progressionLength; index += 1) {

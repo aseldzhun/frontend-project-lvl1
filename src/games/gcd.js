@@ -14,7 +14,7 @@ const getGreatestOurDivider = (smallerNumber, biggerNumber) => {
 };
 
 const gcdGame = () => {
-  const pairsOfQuestionsAndAnswers = [];
+  const roundsData = [];
   for (let counter = 1; counter <= numOfQuestions; counter += 1) {
     const numberOne = Math.floor(Math.random() * 100) + 1;
     const numberTwo = Math.floor(Math.random() * 100) + 1;
@@ -23,9 +23,9 @@ const gcdGame = () => {
     const biggerNumber = (numberOne > numberTwo) ? numberOne : numberTwo;
     const greatestOurDivider = getGreatestOurDivider(smallerNumber, biggerNumber);
     const answer = greatestOurDivider.toString();
-    pairsOfQuestionsAndAnswers.push([question, answer]);
+    roundsData.push([question, answer]);
   }
-  engine(taskOfGame, pairsOfQuestionsAndAnswers);
+  engine(taskOfGame, roundsData);
 };
 
 export default gcdGame;

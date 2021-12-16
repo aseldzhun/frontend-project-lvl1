@@ -13,7 +13,7 @@ const getHiddenNumber = (progression) => {
 };
 
 const progressionGame = () => {
-  const pairsOfQuestionsAndAnswers = [];
+  const roundsData = [];
   for (let counter = 1; counter <= numOfQuestions; counter += 1) {
     const firstNumber = Math.floor(Math.random() * 100);
     const commonDifference = Math.floor(Math.random() * 10) + 1;
@@ -24,9 +24,9 @@ const progressionGame = () => {
     }
     const answer = getHiddenNumber(progression);
     const question = progression.join(' ');
-    pairsOfQuestionsAndAnswers.push([question, answer]);
+    roundsData.push([question, answer]);
   }
-  engine(taskOfGame, pairsOfQuestionsAndAnswers);
+  engine(taskOfGame, roundsData);
 };
 
 export default progressionGame;

@@ -20,14 +20,14 @@ const isPrime = (number) => {
 };
 
 const primeGame = () => {
-  const pairsOfQuestionsAndAnswers = [];
+  const roundsData = [];
   for (let counter = 1; counter <= numOfQuestions; counter += 1) {
     const number = Math.floor(Math.random() * 100) + 1;
     const question = `${number}`;
     const answer = (isPrime(number)) ? 'yes' : 'no';
-    pairsOfQuestionsAndAnswers.push([question, answer]);
+    roundsData.push([question, answer]);
   }
-  engine(taskOfGame, pairsOfQuestionsAndAnswers);
+  engine(taskOfGame, roundsData);
 };
 
 export default primeGame;

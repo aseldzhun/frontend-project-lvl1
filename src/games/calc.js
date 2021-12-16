@@ -21,7 +21,7 @@ const getResultOfExpression = (numberOne, numberTwo, operator) => {
 };
 
 const evenGame = () => {
-  const pairsOfQuestionsAndAnswers = [];
+  const roundsData = [];
   const operators = ['+', '-', '*'];
   for (let counter = 1; counter <= numOfQuestions; counter += 1) {
     const numberOne = Math.floor(Math.random() * 100);
@@ -29,9 +29,9 @@ const evenGame = () => {
     const operator = operators[Math.floor(Math.random() * 3)];
     const question = `${numberOne} ${operator} ${numberTwo}`;
     const answer = getResultOfExpression(numberOne, numberTwo, operator);
-    pairsOfQuestionsAndAnswers.push([question, answer]);
+    roundsData.push([question, answer]);
   }
-  engine(taskOfGame, pairsOfQuestionsAndAnswers);
+  engine(taskOfGame, roundsData);
 };
 
 export default evenGame;

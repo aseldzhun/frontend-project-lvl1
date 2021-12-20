@@ -8,7 +8,6 @@ export const engine = (taskOfGame, roundsData) => {
   console.log(`Hello, ${name}!`);
   console.log(taskOfGame);
 
-  /* eslint-disable-next-line */
   for (const roundData of roundsData) {
     const [question, answer] = roundData;
     console.log(`Question: ${question}`);

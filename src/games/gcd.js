@@ -8,10 +8,10 @@ const gameTask = 'Find the greatest common divisor of given numbers.';
 const getGCD = (numberOne, numberTwo) => {
   const smallerNumber = (numberOne < numberTwo) ? numberOne : numberTwo;
   let biggerNumber = (numberOne > numberTwo) ? numberOne : numberTwo;
-  if (smallerNumber === biggerNumber) {
+  if (biggerNumber % smallerNumber === 0) {
     return smallerNumber;
   }
-  biggerNumber -= smallerNumber;
+  biggerNumber %= smallerNumber;
   return (getGCD(smallerNumber, biggerNumber));
 };
 

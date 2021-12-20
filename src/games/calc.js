@@ -20,17 +20,17 @@ const getAnswer = (numberOne, numberTwo, operator) => {
   }
 };
 
-const evenGame = () => {
+const calcGame = () => {
   const roundsData = [];
   for (let counter = 1; counter <= numOfQuestions; counter += 1) {
     const numberOne = getRandomNumber(100);
     const numberTwo = getRandomNumber(100);
     const operator = operators[getRandomNumber(operatorsNumber) - 1];
     const question = `${numberOne} ${operator} ${numberTwo}`;
-    const answer = getAnswer(numberOne, numberTwo, operator).toString();
+    const answer = String(getAnswer(numberOne, numberTwo, operator));
     roundsData.push([question, answer]);
   }
   engine(taskOfGame, roundsData);
 };
 
-export default evenGame;
+export default calcGame;

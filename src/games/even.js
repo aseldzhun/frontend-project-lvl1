@@ -12,7 +12,7 @@ const evenGame = () => {
   for (let counter = 1; counter <= numOfQuestions; counter += 1) {
     const number = getRandomNumber(100);
     const question = number;
-    const answer = (isEven(number)) ? 'yes' : 'no';
+    const answer = isEven(number) ? 'yes' : 'no';
     roundsData.push([question, answer]);
   }
   engine(gameTask, roundsData);

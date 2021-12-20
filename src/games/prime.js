@@ -26,7 +26,7 @@ const primeGame = () => {
   for (let counter = 1; counter <= numOfQuestions; counter += 1) {
     const number = getRandomNumber(100);
     const question = `${number}`;
-    const answer = (isPrime(number)) ? 'yes' : 'no';
+    const answer = isPrime(number) ? 'yes' : 'no';
     roundsData.push([question, answer]);
   }
   engine(gameTask, roundsData);

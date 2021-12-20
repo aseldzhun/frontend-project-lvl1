@@ -6,13 +6,14 @@ import getRandomNumber from '../randomNumber.js';
 const gameTask = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (number) => {
+  const numberSquareRoot = Math.sqrt(number);
   if (number === 0) {
     return false;
   }
   if (number < 4) {
     return true;
   }
-  for (let divider = 2; divider <= (number / 2); divider += 1) {
+  for (let divider = 2; divider <= numberSquareRoot; divider += 1) {
     if (number % divider === 0) {
       return false;
     }

@@ -3,7 +3,7 @@ import {
 } from '../index.js';
 import getRandomNumber from '../randomNumber.js';
 
-const taskOfGame = 'What is the result of the expression?';
+const gameTask = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
 const operatorsNumber = operators.length;
 
@@ -30,7 +30,7 @@ const calcGame = () => {
     const answer = String(getAnswer(numberOne, numberTwo, operator));
     roundsData.push([question, answer]);
   }
-  engine(taskOfGame, roundsData);
+  engine(gameTask, roundsData);
 };
 
 export default calcGame;

@@ -3,7 +3,7 @@ import {
 } from '../index.js';
 import getRandomNumber from '../randomNumber.js';
 
-const taskOfGame = 'What is the result of the expression?';
+const gameTask = 'What is the result of the expression?';
 
 const getProgression = () => {
   const firstNumber = getRandomNumber(100);
@@ -27,7 +27,7 @@ const progressionGame = () => {
     const question = progression.join(' ');
     roundsData.push([question, answer]);
   }
-  engine(taskOfGame, roundsData);
+  engine(gameTask, roundsData);
 };
 
 export default progressionGame;

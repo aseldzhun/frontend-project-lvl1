@@ -3,7 +3,7 @@ import {
 } from '../index.js';
 import getRandomNumber from '../randomNumber.js';
 
-const taskOfGame = 'Answer "yes" if the number is even, otherwise answer "no".';
+const gameTask = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (number) => number % 2 === 0;
 
@@ -15,7 +15,7 @@ const evenGame = () => {
     const answer = (isEven(number)) ? 'yes' : 'no';
     roundsData.push([question, answer]);
   }
-  engine(taskOfGame, roundsData);
+  engine(gameTask, roundsData);
 };
 
 export default evenGame;

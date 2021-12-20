@@ -3,7 +3,7 @@ import {
 } from '../index.js';
 import getRandomNumber from '../randomNumber.js';
 
-const taskOfGame = 'Find the greatest common divisor of given numbers.';
+const gameTask = 'Find the greatest common divisor of given numbers.';
 
 const getGreatestOurDivider = (numberOne, numberTwo) => {
   const smallerNumber = (numberOne < numberTwo) ? numberOne : numberTwo;
@@ -25,7 +25,7 @@ const gcdGame = () => {
     const answer = greatestOurDivider.toString();
     roundsData.push([question, answer]);
   }
-  engine(taskOfGame, roundsData);
+  engine(gameTask, roundsData);
 };
 
 export default gcdGame;

@@ -3,7 +3,7 @@ import {
 } from '../index.js';
 import getRandomNumber from '../randomNumber.js';
 
-const taskOfGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameTask = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (number) => {
   if (number === 0) {
@@ -28,7 +28,7 @@ const primeGame = () => {
     const answer = (isPrime(number)) ? 'yes' : 'no';
     roundsData.push([question, answer]);
   }
-  engine(taskOfGame, roundsData);
+  engine(gameTask, roundsData);
 };
 
 export default primeGame;

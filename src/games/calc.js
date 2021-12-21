@@ -27,7 +27,7 @@ const calcGame = () => {
     const numberTwo = getRandomNumber(1, 101);
     const operator = operators[getRandomNumber(0, operatorsCount)];
     const question = `${numberOne} ${operator} ${numberTwo}`;
-    const answer = String(getAnswer(numberOne, numberTwo, operator));
+    const answer = `${getAnswer(numberOne, numberTwo, operator)}`;
     roundsData.push([question, answer]);
   }
   engine(gameTask, roundsData);

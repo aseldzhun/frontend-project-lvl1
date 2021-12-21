@@ -11,7 +11,7 @@ const evenGame = () => {
   const roundsData = [];
   for (let counter = 1; counter <= numOfQuestions; counter += 1) {
     const number = getRandomNumber(1, 101);
-    const question = String(number);
+    const question = `${number}`;
     const answer = isEven(number) ? 'yes' : 'no';
     roundsData.push([question, answer]);
   }

@@ -23,7 +23,7 @@ const progressionGame = () => {
     const hiddenIndex = getRandomNumber(1, 11) - 1;
     const hiddenNumber = progression[hiddenIndex];
     progression[hiddenIndex] = '..';
-    const answer = hiddenNumber.toString();
+    const answer = `${hiddenNumber}`;
     const question = progression.join(' ');
     roundsData.push([question, answer]);
   }

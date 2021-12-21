@@ -23,9 +23,9 @@ const getAnswer = (numberOne, numberTwo, operator) => {
 const calcGame = () => {
   const roundsData = [];
   for (let counter = 1; counter <= numOfQuestions; counter += 1) {
-    const numberOne = getRandomNumber(100);
-    const numberTwo = getRandomNumber(100);
-    const operator = operators[getRandomNumber(operatorsCount) - 1];
+    const numberOne = getRandomNumber(1, 101);
+    const numberTwo = getRandomNumber(1, 101);
+    const operator = operators[getRandomNumber(0, operatorsCount)];
     const question = `${numberOne} ${operator} ${numberTwo}`;
     const answer = String(getAnswer(numberOne, numberTwo, operator));
     roundsData.push([question, answer]);

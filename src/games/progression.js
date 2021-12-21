@@ -16,11 +16,11 @@ const getProgression = (firstNumber, commonDifference, progressionLength) => {
 const progressionGame = () => {
   const roundsData = [];
   for (let counter = 1; counter <= numOfQuestions; counter += 1) {
-    const firstNumber = getRandomNumber(100);
-    const commonDifference = getRandomNumber(10);
+    const firstNumber = getRandomNumber(1, 101);
+    const commonDifference = getRandomNumber(1, 11);
     const progressionLength = 10;
     const progression = getProgression(firstNumber, commonDifference, progressionLength);
-    const hiddenIndex = getRandomNumber(10) - 1;
+    const hiddenIndex = getRandomNumber(1, 11) - 1;
     const hiddenNumber = progression[hiddenIndex];
     progression[hiddenIndex] = '..';
     const answer = hiddenNumber.toString();

@@ -6,13 +6,10 @@ import getRandomNumber from '../randomNumber.js';
 const gameTask = 'Find the greatest common divisor of given numbers.';
 
 const getGCD = (numberOne, numberTwo) => {
-  const smallerNumber = (numberOne < numberTwo) ? numberOne : numberTwo;
-  let biggerNumber = (numberOne > numberTwo) ? numberOne : numberTwo;
-  if (biggerNumber % smallerNumber === 0) {
-    return smallerNumber;
+  if (!numberTwo) {
+    return numberOne;
   }
-  biggerNumber %= smallerNumber;
-  return (getGCD(smallerNumber, biggerNumber));
+  return (getGCD(numberTwo, numberOne % numberTwo));
 };
 
 const gcdGame = () => {

@@ -5,10 +5,10 @@ import getRandomNumber from '../randomNumber.js';
 
 const gameTask = 'What is the result of the expression?';
 
-const getProgression = (firstNumber, commonDifference, progressionLength) => {
+const getProgression = (firstNumber, progressionStep, progressionLength) => {
   const progression = [];
   for (let index = 0; index < progressionLength; index += 1) {
-    progression.push(firstNumber + (commonDifference * index));
+    progression.push(firstNumber + (progressionStep * index));
   }
   return progression;
 };
@@ -17,9 +17,9 @@ const progressionGame = () => {
   const roundsData = [];
   for (let counter = 1; counter <= numOfQuestions; counter += 1) {
     const firstNumber = getRandomNumber(1, 101);
-    const commonDifference = getRandomNumber(1, 11);
+    const progressionStep = getRandomNumber(1, 11);
     const progressionLength = getRandomNumber(5, 16);
-    const progression = getProgression(firstNumber, commonDifference, progressionLength);
+    const progression = getProgression(firstNumber, progressionStep, progressionLength);
     const hiddenIndex = getRandomNumber(0, progressionLength);
     const hiddenNumber = progression[hiddenIndex];
     progression[hiddenIndex] = '..';

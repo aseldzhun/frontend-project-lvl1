@@ -5,7 +5,7 @@ import getRandomNumber from '../randomNumber.js';
 
 const gameTask = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
-const operatorsNumber = operators.length;
+const operatorsCount = operators.length;
 
 const getAnswer = (numberOne, numberTwo, operator) => {
   switch (operator) {
@@ -25,7 +25,7 @@ const calcGame = () => {
   for (let counter = 1; counter <= numOfQuestions; counter += 1) {
     const numberOne = getRandomNumber(100);
     const numberTwo = getRandomNumber(100);
-    const operator = operators[getRandomNumber(operatorsNumber) - 1];
+    const operator = operators[getRandomNumber(operatorsCount) - 1];
     const question = `${numberOne} ${operator} ${numberTwo}`;
     const answer = String(getAnswer(numberOne, numberTwo, operator));
     roundsData.push([question, answer]);

@@ -18,9 +18,9 @@ const progressionGame = () => {
   for (let counter = 1; counter <= numOfQuestions; counter += 1) {
     const firstNumber = getRandomNumber(1, 101);
     const commonDifference = getRandomNumber(1, 11);
-    const progressionLength = 10;
+    const progressionLength = getRandomNumber(5, 16);
     const progression = getProgression(firstNumber, commonDifference, progressionLength);
-    const hiddenIndex = getRandomNumber(1, 11) - 1;
+    const hiddenIndex = getRandomNumber(0, progressionLength);
     const hiddenNumber = progression[hiddenIndex];
     progression[hiddenIndex] = '..';
     const answer = `${hiddenNumber}`;

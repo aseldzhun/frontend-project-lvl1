@@ -18,8 +18,7 @@ const gcdGame = () => {
     const numberOne = getRandomNumber(1, 101);
     const numberTwo = getRandomNumber(1, 101);
     const question = `${numberOne} ${numberTwo}`;
-    const greatestOurDivider = getGCD(numberOne, numberTwo);
-    const answer = greatestOurDivider.toString();
+    const answer = `${getGCD(numberOne, numberTwo)}`;
     roundsData.push([question, answer]);
   }
   engine(gameTask, roundsData);

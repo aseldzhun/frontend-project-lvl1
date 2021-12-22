@@ -22,7 +22,7 @@ const getAnswer = (numberOne, numberTwo, operator) => {
 
 const calcGame = () => {
   const roundsData = [];
-  for (let counter = 1; counter <= numOfQuestions; counter += 1) {
+  for (let counter = 0; counter < numOfQuestions; counter += 1) {
     const numberOne = getRandomNumber(1, 101);
     const numberTwo = getRandomNumber(1, 101);
     const operator = operators[getRandomNumber(0, operatorsCount)];

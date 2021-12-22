@@ -15,7 +15,7 @@ const getProgression = (firstNumber, progressionStep, progressionLength) => {
 
 const progressionGame = () => {
   const roundsData = [];
-  for (let counter = 1; counter <= numOfQuestions; counter += 1) {
+  for (let counter = 0; counter < numOfQuestions; counter += 1) {
     const firstNumber = getRandomNumber(1, 101);
     const progressionStep = getRandomNumber(1, 11);
     const progressionLength = getRandomNumber(5, 16);
